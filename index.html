@@ -8,9 +8,18 @@
   <link rel='stylesheet' type='text/css' href='style.css'>
 </head>
 <body>
- <div id='search'>
-  <input type='text' placeholder='Search'>
- </div>
+
+  <h1 class='heading'>Shelley's Flickr Viewer</h1>
+  
+  <form id='search' method='get'>
+    <input id='search-box' type='text' placeholder='Search'>
+    <button id='search-button' type='submit'>Submit</button> 
+  </form>
+
+  <div id='photo-layout'>
+    <ul id='pics'></ul>
+  </div>
+
 <script src='script.js'></script>  
 </body>
 </html>
