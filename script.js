@@ -8,13 +8,17 @@ jQuery(document).ready(function ($) {
     } else {
       searchTag = $('searchBox').val()
 
-      var url = 
+      var url =
         'https://api.flickr.com/services/feeds/photos_public.gne?' + 'format=json&jsoncallback=?&tags=' + searchTag + '&tagmode=all'
 
       $.getJSON(url, function (data) {
+        var html = ' '
         $.each(data.items, function (i, item) {
-          
+          html += '<h3>' + item.title + '<h3>'
+          html += '<a href=' + item.media.m + '>' + item.media.m + '</a>'
+          html += '<p>Tags:' + item.tags + '</p>'
         })
+        $('#photoInfo').html(html)
       })
     }
   })
