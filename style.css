@@ -15,10 +15,15 @@ form {
 
 #searchBox {
   border: 1px solid lawngreen;
-  width: 125px;
-  height: 18px;
+  width: 155px;
+  height: 25px;
+  margin: 0 10px 0 0;
+  font-size: 13px;
 }
 
 #searchButton {
-
+  background-color: lawngreen;
+  width: 90px;
+  height: 28px;
+  font-size: 13px;
 }
