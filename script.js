@@ -7,6 +7,15 @@ jQuery(document).ready(function ($) {
       alert('Please enter one or more tags to proceed.')
     } else {
       searchTag = $('searchBox').val()
+
+      var url = 
+        'https://api.flickr.com/services/feeds/photos_public.gne?' + 'format=json&jsoncallback=?&tags=' + searchTag + '&tagmode=all'
+
+      $.getJSON(url, function (data) {
+        $.each(data.items, function (i, item) {
+          
+        })
+      })
     }
   })
 })
