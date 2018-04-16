@@ -15,7 +15,7 @@ jQuery(document).ready(function ($) {
         var html = ' '
         $.each(data.items, function (i, item) {
           html += '<h3>' + item.title + '<h3>'
-          html += '<a href=' + item.media.m + '>' + item.media.m + '</a>'
+          html += '<a target="blank" href=' + item.media.m + '>' + item.media.m + '</a>'
           html += '<p>Date Taken: ' + item.date_taken + '</p>'
           html += '<br></br>'
         })
