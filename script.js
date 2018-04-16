@@ -6,7 +6,7 @@ jQuery(document).ready(function ($) {
     if ($('#searchBox').val() === ' ') {
       alert('Please enter one or more tags to proceed.')
     } else {
-      searchTag = $('searchBox').val()
+      searchTag = $('#searchBox').val()
 
       var url =
         'https://api.flickr.com/services/feeds/photos_public.gne?' + 'format=json&jsoncallback=?&tags=' + searchTag + '&tagmode=all'
@@ -14,9 +14,9 @@ jQuery(document).ready(function ($) {
       $.getJSON(url, function (data) {
         var html = ' '
         $.each(data.items, function (i, item) {
-          html += '<h3>' + item.title + '<h3>'
-          html += '<a target="blank" href=' + item.media.m + '>' + item.media.m + '</a>'
-          html += '<p>Date Taken: ' + item.date_taken + '</p>'
+          html += '<h3>' + item.title + '</h3>'
+          html += '<a href=' + item.media.m + '>' + item.media.m + '</a>'
+          html += '<p>Tags: ' + item.tags + '</p>'
           html += '<br></br>'
         })
         $('#photoInfo').html(html)
