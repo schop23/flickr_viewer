@@ -16,7 +16,7 @@ jQuery(document).ready(function ($) {
         $.each(data.items, function (i, item) {
           html += '<h3>' + item.title + '<h3>'
           html += '<a href=' + item.media.m + '>' + item.media.m + '</a>'
-          html += '<p>Tags: ' + item.tags + '</p>'
+          html += '<p>Date Taken: ' + item.date_taken + '</p>'
           html += '<br></br>'
         })
         $('#photoInfo').html(html)
